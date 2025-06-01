@@ -1,0 +1,5 @@
+Program #1:  Show how to set up a VR environment.  Make sure you choose the starting position, whether to have collision detection, and whether there will be image smoothing.  Include your code and screen shots of a run.
+
+Program #2: Show how to add various objects to the VR environment.  Set at least three timers to have the objects do something (like move, or change shape, or spin, etc.).  Include your code and screen shots of a run.
+
+Program #3: Show how to add avatars to the VR environment.  Set at least 3 button controls to have the avatars do something (like move, change shape, change state, etc.). Include your code and screen shots of a run.

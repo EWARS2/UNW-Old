@@ -1,0 +1,189 @@
+! version = 2.0
+
+! local concat = newline
+
+! sub who's = who is
+! sub whose = who is
+
+> start
+  // Easter egg - Most of "start"
+  // Contains most of the concepts required for the assignment.
+  // Everything else is a sort of experiment to see just how possible
+  // a text adventure is in RiveScript. I've got more I want to try
+  // with this.
+
+  + [*] (no|who|is|he|joe) [*]
+  % do you know *
+  - <botstar>seppi J. Johnson is a nonexistent individual living in East Shrekistan.
+
+  + [*]
+  - {@greeting}{weight=9}
+  - Do you know {random}Joe|Jeff|John|Jim{/random}? {weight=1}
+
+  + greeting
+  - Welcome to an excerpt of Adam Cadre's interactive fiction tutorial.
+  ^ Adapted by Ethan Reed to Rivescript, with no affiliation or ownership of
+  ^ the original work by Adam Cadre.
+  ^ As an excerpt, not all features have been implemented.
+  ^ \nOfficial version found <a href="https://adamcadre.ac/if/tutorial.html">here</a>
+  ^ \nType "Start" to start! {topic=before_the_gate}
+
+< start
+> topic before_the_gate
+  + start
+  - It took a long time to get here, but at last, you think you've reached your
+  ^ destination. You double-check the address... yes, this is it.
+  ^ \n{@l}
+
+  + before the gate
+  - Before the Gate
+  ^ You are standing in front of a handsome but imposing wrought iron gate. You
+  ^ hope it's unlocked, because there aren't any footholds to help you climb it, and
+  ^ those spikes at the top look nasty!
+
+  + (look|l) [*]
+  @ before the gate
+
+  + open [the] gate
+  - You turn the handle, and the gate swings open. You step inside.
+  ^ \n{topic=front_courtyard}{@l}
+
+  + *
+  - Try opening the gate!
+
+< topic
+> topic front_courtyard
+  + front courtyard
+  - Front Courtyard
+  ^ You are standing just inside the gate of a large estate in the heart of the city.
+  ^ Before you is a grand edifice of marble columns and green copper detail work.
+  ^ A broad walkway leads between manicured gardens to the front entrance.
+
+  + (look|l) [*]
+  @ front courtyard
+
+  + close [the] gate
+  - You close the gate behind you and follow the walkway up to the front entrance.
+  ^ Half a dozen marble steps lead up to a gigantic set of double doors, but the
+  ^ doors are cordoned off - as often happens when estates like this get
+  ^ renovated, what was once the main entrance is no longer an actual way in.
+  ^ A sign directs you to walk around the corner of the building and take a flight of
+  ^ stairs down to the basement level. You do so...
+  ^\n{topic=bottom_of_stairs}{@l}
+
+  + *
+  - It would be rude to leave the gate open.
+
+< topic
+> topic bottom_of_stairs
+  + bottom of stairs
+  - Bottom of Stairs
+  ^ You are standing before an anonymous gray door that is not really in keeping
+  ^ with what is otherwise a palatial building in the classical style. Stairs lead up to
+  ^ ground level.
+
+  + (look|l) [*]
+  @ bottom of stairs
+
+  + open [the] door
+  - You open the door and walk from brilliant sunshine into the dimness of the
+  ^ windowless indoors.
+  ^ \n{topic=vestibule}{@l}
+
+  + *
+  - Try opening the door.
+
+< topic
+> topic vestibule
+  + vestibule
+  - Vestibule
+  ^ You are in a small, empty antechamber. Behind you is the door you just walked
+  ^ in; in front of you is an archway leading to a long hallway.
+
+  + (look|l) [*]
+  @ vestibule
+
+  + [(enter|go)] [*] (hall|hallway|arch|archway)
+  - You walk through the archway out of the vestibule...
+  ^ \n{topic=long_hallway_south_end}{@l}
+
+  + [(enter|go)] [*] (door|doorway)
+  - \n{topic=bottom_of_stairs}{@l}
+
+< topic
+> topic long_hallway_south_end
+  + long hallway south end
+  - Long Hallway, South End
+  ^ This hallway, lit by cold fluorescent tubes that line the top edges of the walls,
+  ^ stretches a long way to the north. To the south, an archway leads back to the
+  ^ vestibule.
+
+  + (look|l) [*]
+  @ long hallway south end
+
+  + [(enter|go)] (north|n)
+  - \n{topic=middle_of_long_hallway}{@l}
+
+  + [(enter|go)] (south|s|vestibule|arch|archway)
+  - \n{topic=vestibule}{@l}
+
+< topic
+> topic middle_of_long_hallway
+  + middle of long hallway
+  - Middle of Long Hallway
+  ^ You are in the middle of a hallway which stretches a long way to the north and
+  ^ south.
+
+  + (look|l) [*]
+  @ middle of long hallway
+
+  + [(enter|go)] (north|n)
+  - \n{topic=long_hallway_north_end}{@l}
+
+  + [(enter|go)] (south|s)
+  - \n{topic=long_hallway_south_end}{@l}
+
+< topic
+> topic long_hallway_north_end
+  + long hallway north end
+  - Long Hallway, North End
+  ^ This hallway, lit by cold fluorescent tubes that line the top edges of the walls,
+  ^ stretches a long way to the south. To the north, an archway leads to a flight of
+  ^ stairs.
+
+  + (look|l) [*]
+  @ long hallway north end
+
+  + [(enter|go)] (north|n|arch|archway|stairs)
+  - You walk through the archway and up the stairs into daylight...
+  ^ \n{topic=maze}{@l}
+  ^ Why not south, back the way you came? Because as soon as you walk out into
+  ^ the middle of the chamber, a stone wall slams down behind you. CRASH!
+
+  + [(enter|go)] (south|s)
+  - \n{topic=middle_of_long_hallway}{@l}
+
+< topic
+> topic maze
+  + maze
+  - Maze
+  ^ You are in a small chamber, open to the sky, but enclosed on all sides by tall
+  ^ stone walls. Exits lead north and west.
+
+  + (look|l) [*]
+  @ maze
+
+  + [(enter|go)] (north|n)
+  @ *
+
+  + [(enter|go)] (south|s)
+  @ *
+
+  + *
+  - Upon investigation, it appears you're trapped.
+  ^ There is nothing you can do, since the rest of the world isn't
+  ^ implemented beyond here. Will need to fix that later...
+  ^ - Ethan
+  ^ Game over.
+
+< topic

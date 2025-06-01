@@ -1,0 +1,33 @@
+Program #1 -- File Statistics APP
+
+Suppose that a file contains a bunch of text.  Write a program that reads in the file and displays the following statistics about the file:
+
+    displays the first and last line of the text (just to validate for the user that the file has been successfully read in.)
+    tells the user the average number of letters per word (use a double variable type and round to the nearest 0.1)
+    tells the user the average number of words per sentence (use a double variable type and round to the nearest 0.1)       
+
+-----------------------------------------------------------------------------
+
+Program #2 -- File Replacement
+
+Suppose a file contains a bunch of text.  Write a program (much of this has already been written for you) that asks the user for two strings, say string1 and string2.  The program then creates a new file whicj is almost identical to the old file, except that all instances of string1 are replaced with string2.
+
+--------------------------------------------------------------------------------
+
+Program #3 -- Common Words APP
+
+Write a program that asks the user for a positive integer, n and the name of a file.  The program prints the n most common words in the document, arranged in order of their frequencies.
+
+-----------------------------------------------------------------------
+
+Submit code and sample run for each program.
+
+Each program will be graded on the following criteria.
+
+A. [30 points].  Meets requirements. The program meets the minimum requirements stated in the problem.
+
+B. [30 points]. Logic: The logic of the code is readily apparent and correct.
+
+C. [20 points]. Correct Output: The correct output for each program is included.  For programs with text output, include at least two runs of the program.
+
+D. [20 points].  Professionalism:  The program is desired by an employer. The program demonstrates at least one of the following: the code is elegant, the code runs quickly, the code is simple, the code accomplishes something beyond expectations.

@@ -1,0 +1,226 @@
+C:\Users\jefma\Documents\PythonProjects\DataMining\venv\Scripts\python.exe C:\Users\jefma\Documents\PythonProjects\DataMining\0Example.py 
+
+Here is the data
+         Day Coffee Type  Units Sold
+0     Monday    Espresso          25
+1     Monday       Latte          15
+2    Tuesday    Espresso          30
+3    Tuesday       Latte          20
+4  Wednesday    Espresso          35
+
+Here is last five records
+         Day Coffee Type  Units Sold
+9     Friday       Latte          35
+10  Saturday    Espresso          45
+11  Saturday       Latte          35
+12    Sunday    Espresso          45
+13    Sunday       Latte          35
+
+Here is a sample of four items
+          Day Coffee Type  Units Sold
+4   Wednesday    Espresso          35
+0      Monday    Espresso          25
+13     Sunday       Latte          35
+1      Monday       Latte          15
+
+Here are rows 3 and 5
+         Day Coffee Type  Units Sold
+3    Tuesday       Latte          20
+5  Wednesday       Latte          25
+
+Here are odd rows starting at row 3
+          Day Coffee Type  Units Sold
+3     Tuesday       Latte          20
+5   Wednesday       Latte          25
+7    Thursday       Latte          30
+9      Friday       Latte          35
+11   Saturday       Latte          35
+13     Sunday       Latte          35
+
+Here are some rows with column Day
+1       Monday
+2      Tuesday
+3      Tuesday
+4    Wednesday
+5    Wednesday
+Name: Day, dtype: object
+
+Here are some rows with two columns
+         Day  Units Sold
+1     Monday          15
+2    Tuesday          30
+3    Tuesday          20
+4  Wednesday          35
+5  Wednesday          25
+
+Here are some rows with two columns
+         Day  Units Sold
+1     Monday          15
+2    Tuesday          30
+3    Tuesday          20
+4  Wednesday          35
+
+Updating Data Frame
+          Day Coffee Type  Units Sold
+0      Monday    Espresso          25
+1      Monday       Latte          10
+2     Tuesday    Espresso          30
+3     Tuesday       Latte          20
+4   Wednesday    Espresso          35
+5   Wednesday       Latte          25
+6    Thursday    Espresso          40
+7    Thursday       Latte          30
+8      Friday    Espresso          45
+9      Friday       Latte          35
+10   Saturday    Espresso          45
+11   Saturday       Latte          35
+12     Sunday    Espresso          45
+13     Sunday       Latte          35
+
+Sorting Data
+          Day Coffee Type  Units Sold
+12     Sunday    Espresso          45
+10   Saturday    Espresso          45
+8      Friday    Espresso          45
+6    Thursday    Espresso          40
+4   Wednesday    Espresso          35
+13     Sunday       Latte          35
+11   Saturday       Latte          35
+9      Friday       Latte          35
+2     Tuesday    Espresso          30
+7    Thursday       Latte          30
+5   Wednesday       Latte          25
+0      Monday    Espresso          25
+3     Tuesday       Latte          20
+1      Monday       Latte          10
+
+Getting Info
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 14 entries, 0 to 13
+Data columns (total 3 columns):
+ #   Column       Non-Null Count  Dtype 
+---  ------       --------------  ----- 
+ 0   Day          14 non-null     object
+ 1   Coffee Type  14 non-null     object
+ 2   Units Sold   14 non-null     int64 
+dtypes: int64(1), object(2)
+memory usage: 468.0+ bytes
+None
+
+Filtering Data by numerical condition
+          Day Coffee Type  Units Sold
+2     Tuesday    Espresso          30
+4   Wednesday    Espresso          35
+6    Thursday    Espresso          40
+7    Thursday       Latte          30
+8      Friday    Espresso          45
+9      Friday       Latte          35
+10   Saturday    Espresso          45
+11   Saturday       Latte          35
+12     Sunday    Espresso          45
+13     Sunday       Latte          35
+
+Filtering Data by string condition
+          Day Coffee Type  Units Sold
+2     Tuesday    Espresso          30
+3     Tuesday       Latte          20
+4   Wednesday    Espresso          35
+5   Wednesday       Latte          25
+6    Thursday    Espresso          40
+7    Thursday       Latte          30
+10   Saturday    Espresso          45
+11   Saturday       Latte          35
+12     Sunday    Espresso          45
+13     Sunday       Latte          35
+
+Filtering Data by isin condition
+      Day Coffee Type  Units Sold
+0  Monday    Espresso          25
+1  Monday       Latte          10
+8  Friday    Espresso          45
+9  Friday       Latte          35
+
+Filtering Data by query
+
+Adding Columns
+          Day Coffee Type  Units Sold  Unit Price
+0      Monday    Espresso          25        3.99
+1      Monday       Latte          10        5.99
+2     Tuesday    Espresso          30        3.99
+3     Tuesday       Latte          20        5.99
+4   Wednesday    Espresso          35        3.99
+5   Wednesday       Latte          25        5.99
+6    Thursday    Espresso          40        3.99
+7    Thursday       Latte          30        5.99
+8      Friday    Espresso          45        3.99
+9      Friday       Latte          35        5.99
+10   Saturday    Espresso          45        3.99
+11   Saturday       Latte          35        5.99
+12     Sunday    Espresso          45        3.99
+13     Sunday       Latte          35        5.99
+          Day Coffee Type  Units Sold  Unit Price  Profit
+0      Monday    Espresso          25        3.99   99.75
+1      Monday       Latte          10        5.99   59.90
+2     Tuesday    Espresso          30        3.99  119.70
+3     Tuesday       Latte          20        5.99  119.80
+4   Wednesday    Espresso          35        3.99  139.65
+5   Wednesday       Latte          25        5.99  149.75
+6    Thursday    Espresso          40        3.99  159.60
+7    Thursday       Latte          30        5.99  179.70
+8      Friday    Espresso          45        3.99  179.55
+9      Friday       Latte          35        5.99  209.65
+10   Saturday    Espresso          45        3.99  179.55
+11   Saturday       Latte          35        5.99  209.65
+12     Sunday    Espresso          45        3.99  179.55
+13     Sunday       Latte          35        5.99  209.65
+
+Removing Column
+          Day Coffee Type  Units Sold  Profit
+0      Monday    Espresso          25   99.75
+1      Monday       Latte          10   59.90
+2     Tuesday    Espresso          30  119.70
+3     Tuesday       Latte          20  119.80
+4   Wednesday    Espresso          35  139.65
+5   Wednesday       Latte          25  149.75
+6    Thursday    Espresso          40  159.60
+7    Thursday       Latte          30  179.70
+8      Friday    Espresso          45  179.55
+9      Friday       Latte          35  209.65
+10   Saturday    Espresso          45  179.55
+11   Saturday       Latte          35  209.65
+12     Sunday    Espresso          45  179.55
+13     Sunday       Latte          35  209.65
+
+Value Counts
+Units Sold
+35    4
+45    3
+25    2
+30    2
+10    1
+20    1
+40    1
+Name: count, dtype: int64
+
+Sum Units Sold
+455
+
+Averge Units Sold
+32.5
+
+Std Units Sold
+10.143205380185071
+
+Sum Units Sold by Coffee Type
+Coffee Type
+Espresso    265
+Latte       190
+Name: Units Sold, dtype: int64
+
+Average Units Sold by Coffee Type
+Coffee Type
+Espresso    37.857143
+Latte       27.142857
+Name: Units Sold, dtype: float64
+
+Process finished with exit code 0
