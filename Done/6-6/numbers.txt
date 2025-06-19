@@ -1,0 +1,18 @@
+69
+420
+19.99
+1234567890
+0987654321
+2468
+9
+10
+21
+777
+1981
+1985
+8383838383
+1983
+
+
+The program shouldn't touch this line here.
+If it does, it will error out.
